@@ -22,12 +22,19 @@ public class webPageJavaFxApplication extends Application {
         vbox.setSpacing(50);
         vbox.getChildren().addAll(new Label("First"), new Label("Second"), new Label("Third"));
 
+        HBox hbottombox = new HBox();
+        hbottombox.setSpacing(20);
+        hbottombox.getChildren().addAll(new Label("letters: 0"),
+                                        new Label("Words: 3"),
+                                        new Label("The longest word is: Word !"));
+
         TextArea textarea = new TextArea();
 
         BorderPane border = new BorderPane();
         border.setTop(hbox);
         border.setLeft(vbox);
         border.setCenter(textarea);
+        border.setBottom(hbottombox);
         Scene scene = new Scene(border);
         window.setTitle("Web Page");
         window.setScene(scene);
